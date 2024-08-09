@@ -1,4 +1,4 @@
-# [Live](https://5ig-bold-avogadro.circumeo-apps.net//)
+# [Live](https://5ig-bold-avogadro.circumeo-apps.net/)
 
 # Truth Table Generator in Python
 
