@@ -1,0 +1,70 @@
+<!--
+
+Github: https://github.com/Sohail342
+
+LinkedIn: https://www.linkedin.com/in/sohailahmad3428041928/
+
+ -->
+
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<main class="table" id="customers_table">
+    <section class="table__header">
+        <h1>Truth Table in Python</h1>
+        {% if variable > 1 %}
+        <div class="form-container">
+            <form action="{% url 'table' %}" method="GET" class="form-content">
+                <div class="form-group">
+                    <select name="preposition" id="variable" class="select-custom" required>
+                        <option value="" disabled selected>Select a preposition</option>
+                        <option value="AND">AND</option>
+                        <option value="OR">OR</option>
+                        <option value="NAND">NAND</option>
+                        <option value="NOR">NOR</option>
+                        <option value="XOR">XOR</option>
+                        <option value="XNOR">XNOR</option>
+                        <option value="IMPLIES">IMPLIES</option>
+                        <option value="BICOND">BICOND</option>
+                    </select>
+                </div>
+                <p style="color: red; font-weight: bold;">Large Number takes to time</p>
+        </div>
+        {% else %}
+        <p style="color: red; font-weight: bold;">Only NOT preposition has one Variable</p>
+        <a href={% url 'table' %}>Click here to select preposition</a>
+        {% endif %}
+        <div class="form-container">
+            <div class="form-group">
+                <input type="number" class="select-custom" id="variable" name="variable" min="1" max="9" required>
+            </div>
+            <button type="submit" class="submit-button">Select</button>
+            </form>
+        </div>
+
+    </section>
+
+    <section class="table__body">
+        <table>
+            <thead>
+                <tr>
+                    {% for header in headerName %}
+                    <th> {{ header }} </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for column in rows %}
+                <tr>
+                    {% for row in column %}
+                    <td><strong> {{row}} </strong></td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</main>
+{% endblock %}
