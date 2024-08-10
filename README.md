@@ -59,7 +59,7 @@ Displays a dynamically generated truth table based on user-selected variables an
 
 ### Truth Table Generation
 
-The application allows users to generate truth tables for up to 4 variables. The user can select a logical preposition and view the results directly on the dashboard.
+The application allows users to generate truth tables for up to 9 variables. The user can select a logical preposition and view the results directly on the dashboard.
 
 ### Error Handling
 
