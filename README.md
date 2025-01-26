@@ -1,4 +1,4 @@
-**[Live](https://truth-table-python.vercel.app/)** for better user experience use Desktop Mode
+## **[Live](https://truth-table-python.vercel.app/)**
 
 # Truth Table Generator in Python
 
