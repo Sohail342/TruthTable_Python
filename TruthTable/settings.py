@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-#k0#cuh&6)0yl3rkravbc-frrbzs=7bw!%)l%s)=g6e1(r27c+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'core',
 ]
