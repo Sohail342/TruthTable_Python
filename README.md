@@ -1,4 +1,4 @@
-**[Live](https://ps0-dynamic-davy.circumeo-apps.net/)** for better user experience use Desktop Mode
+**[Live](https://truth-table-python.vercel.app/)** for better user experience use Desktop Mode
 
 # Truth Table Generator in Python
 
