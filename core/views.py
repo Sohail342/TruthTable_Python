@@ -4,10 +4,11 @@ Github: https://github.com/Sohail342
  LinkedIn: https://www.linkedin.com/in/sohailahmad3428041928/
 '''
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import string
+from django.contrib import messages
 from itertools import product
-from django.http import HttpResponse
+
 
 def generate_truth_table(num_vars):
     letters = list(string.ascii_uppercase[15:])  # Starting from 'P'
@@ -69,6 +70,7 @@ def table(request):
                 'variable': num_vars,
             }
         except:
-           return HttpResponse("<h1>Please check your inputs and ensure they are correct.<h1>")
+            messages.error(request, "Please check your inputs and ensure they are correct.")
+            return redirect("table")
             
     return render(request, 'core/index.html', context)

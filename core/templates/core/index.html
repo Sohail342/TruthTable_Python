@@ -20,6 +20,17 @@ LinkedIn: https://www.linkedin.com/in/sohailahmad3428041928/
             </button>
         </div>
 
+        <!-- Display Messages -->
+        {% if messages %}
+        <div class="mb-6">
+            {% for message in messages %}
+            <div class="p-4 rounded-md {% if message.tags == 'success' %}bg-green-100 text-green-800{% elif message.tags == 'error' %}bg-red-100 text-red-800{% endif %}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
         <!-- Form (initially hidden) -->
         <div id="formContainer" class="bg-white shadow-lg rounded-lg p-6 transform transition-all duration-300 hover:scale-105 hidden">
             <h1 class="text-3xl font-bold text-center mb-6">
